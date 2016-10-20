@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>User form</title>
+</head>
+<body>
+	<h1>User form</h1>
+	<form action="/" method="POST">
+		<div>
+			<label for="login">User login</label>
+			<input id="login" type="text" name="login">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input id="password" type="password" name="password">
+		</div>
+		<div>
+			<label for="email">Email</label>
+			<input id="email" type="email" name="email">
+		</div>
+		<div>
+			<label for="phone">Phone</label>
+			<input id="phone" type="text" name="phone">
+		</div>
+		<div>
+			<label for="female">Gender</label>
+			<input id="female" type="radio" name="gender" value="female"> female
+			<input type="radio" name="gender" value="male"> male
+		</div>
+		<fieldset>
+			<legend>Birthday</legend>
+			<label for="birthdayMonth">Month</label>
+			<input id="birthdayMonth" type="number" name="birthdayMonth">
+			<label for="birthdayDay">Day</label>
+			<input id="birthdayDay" type="number" name="birthdayDay">
+			<label for="birthdayYear">Year</label>
+			<input id="birthdayYear" type="number" name="birthdayYear">
+		</fieldset>
+		<div>
+			<label for="country">Country</label>
+			<select id="country" name="country">
+				<option value="Russia">Russia</option>
+				<option value="Ukraine">Ukraine</option>
+				<option value="France">France</option>
+				<option value="Spain">Spain</option>
+				<option value="Sweden">Sweden</option>
+				<option value="Norway">Norway</option>
+				<option value="Germany">Germany</option>
+				<option value="Finland">Finland</option>
+				<option value="Poland">Poland</option>
+				<option value="Italy">Italy</option>
+				<option value="United Kingdom">United Kingdom</option>
+				<option value="Romania">Romania</option>
+				<option value="Belarus">Belarus</option>
+				<option value="Kazakhstan">Kazakhstan</option>
+				<option value="Greece">Greece</option>
+				<option value="Bulgaria">Bulgaria</option>
+				<option vlaue="Iceland">Iceland</option>
+				<option value="Hungary">Hungary</option>
+				<option value="Portugal">Portugal</option>
+				<option value="Austria">Austria</option>
+				<option value="Czech Republic">Czech Republic</option>
+				<option value="Serbia">Serbia</option>
+				<option value="Republic of Ireland">Republic of Ireland</option>
+				<option value="Lithuania">Lithuania</option>
+				<option value="Latvia">Latvia</option>
+				<option value="Croatia">Croatia</option>
+				<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+				<option value="Slovakia">Slovakia</option>
+				<option value="Estonia">Estonia</option>
+				<option value="Denmark">Denmark</option>
+				<option value="Switzerland">Switzerland</option>
+				<option value="Netherlands">Netherlands</option>
+				<option value="Moldova">Moldova</option>
+				<option value="Belgium">Belgium</option>
+				<option value="Albania">Albania</option>
+				<option value="Republic of Macedonia">Republic of Macedonia</option>
+				<option value="Turkey">Turkey</option>
+				<option value="Slovenia">Slovenia</option>
+				<option value="Montenegro">Montenegro</option>
+				<option value="Kosovo">Kosovo</option>
+				<option value="Azerbaijan">Azerbaijan</option>
+				<option value="Luxembourg">Luxembourg</option>
+				<option value="Andorra">Andorra</option>
+				<option value="Malta">Malta</option>
+				<option value="Liechtenstein">Liechtenstein</option>
+				<option value="San Marino">San Marino</option>
+				<option value="Monaco">Monaco</option>
+				<option value="Vatican City">Vatican City</option>
+				<option value="Georgia">Georgia</option>
+			</select>
+		</div>
+		<fieldset>
+			<legend>Shipping address</legend>
+			<label for="shippingCity">City</label>
+			<input required id="shippingCity" type="text" name="shippingCity">
+			<br>
+			<label for="shippingStreet">Street</label>
+			<input required id="shippingStreet" type="text" name="shippingStreet">
+			<br>
+			<label for="shippingPostalCode" maxlength="5">Postal code</label>
+			<input title="Postal code must be like 31 340" required id="shippingPostalCode" type="text" name="shippingPostalCode">
+			<br>
+			<input type="checkbox">
+			<label>If billing address is same</label>
+		</fieldset>
+		<fieldset>
+			<legend>Billing address</legend>
+			<label for="billingCity">City</label>
+			<input required id="billingCity" type="text" name="billingCity">
+			<br>
+			<label for="billingStreet">Street</label>
+			<input required id="billingStreet" type="text" name="billingStreet">
+			<br>
+			<label for="billingPostalCode" maxlength="5">Postal code</label>
+			<input title="Postal code must be like 31 340" required id="billingPostalCode" type="text" name="billingPostalCode">
+		</fieldset>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>
