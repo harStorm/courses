@@ -1,0 +1,211 @@
+{
+	margin: 0;
+	padding: 0;
+}
+input[type="radio"]{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.acticles{
+	display: none;
+
+    animation: hide 1s;
+    animation-fill-mode: both;
+}
+input[type="radio"]:checked + .acticles{
+	display: block;
+
+    animation: show 1s ease;
+    animation-fill-mode: both;
+}
+@keyframes show {
+    0 {
+    	display: block;
+    }
+    1% {
+    	opacity: 0;
+    }
+    100% {
+    	opacity: 1;
+    }
+}
+@keyframes hide {
+    0 {
+    	opacity: 1;
+    }
+    99% {
+    	opacity: 0;
+    }
+    100% {
+    	display: none;
+    }
+}
+.preloader-bg{
+	position: absolute;
+	width: 1000%;
+	height: 100%;
+	left: -1000%;
+	top: 0;
+	z-index: 2;
+
+	transition: left 0s ease;
+}
+.preloader-bg.blue{
+	background-color: blue;
+}
+input[type="radio"]:checked + .acticles + .preloader-bg{
+	left: 1000%;
+
+	transition: left 7s ease;
+}
+.preloader{
+	position:absolute;
+	display:none;
+	width:120px;
+	opacity: 0;
+	top: 50%;
+	left: 50%;
+	margin-left: -60px;
+	z-index: 10;
+}
+
+input[type="radio"]:checked + .acticles + .preloader-bg + .preloader{
+	animation: showPreloader 7s ease;
+    animation-fill-mode: both;
+}
+@keyframes showPreloader {
+    0 {
+    	display: block;
+    }
+    1% {
+    	opacity: 0;
+    }
+    20% {
+    	opacity: 1;
+    }
+    99%{
+    	opacity: 1;
+    }
+    100%{
+    	opacity: 0;
+    	display: none;
+    }
+}
+.preloader, 
+.preloader * {
+	box-sizing: border-box;
+}
+
+.preloader span {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background: #fff;
+	border-radius: 487px;
+	
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.preloader span:nth-child(1) {
+	-webkit-animation: scale 2.05s 0.21s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	-moz-animation: scale 2.05s 0.21s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	animation: scale 2.05s 0.21s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.preloader span:nth-child(2) {
+	-webkit-animation: scale 2.05s 0.41s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	-moz-animation: scale 2.05s 0.41s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	animation: scale 2.05s 0.41s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.preloader span:nth-child(3) {
+	-webkit-animation: scale 2.05s 0.62s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	-moz-animation: scale 2.05s 0.62s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	animation: scale 2.05s 0.62s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.preloader span:nth-child(4) {
+	-webkit-animation: scale 2.05s 0.82s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	-moz-animation: scale 2.05s 0.82s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	animation: scale 2.05s 0.82s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.preloader span:nth-child(5) {
+	-webkit-animation: scale 2.05s 1.03s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	-moz-animation: scale 2.05s 1.03s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	animation: scale 2.05s 1.03s infinite cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+
+
+@keyframes scale {
+	0% {
+		transform: scale(0);
+	}
+	25% {
+		transform: scale(0.9, 0.9);
+		background-color: #fff;
+	}
+	50% {
+		transform: scale(1, 1);
+		margin: 0 3px;
+		background-color: #fff;
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@-webkit-keyframes scale {
+	0% {
+		-webkit-transform: scale(0);
+	}
+	25% {
+		-webkit-transform: scale(0.9, 0.9);
+		background-color: #fff;
+	}
+	50% {
+		-webkit-transform: scale(1, 1);
+		margin: 0 3px;
+		background-color: #fff;
+	}
+	100% {
+		-webkit-transform: scale(0);
+	}
+}
+
+@-moz-keyframes scale {
+	0% {
+		-moz-transform: scale(0);
+	}
+	25% {
+		-moz-transform: scale(0.9, 0.9);
+		background-color: #fff;
+	}
+	50% {
+		-moz-transform: scale(1, 1);
+		margin: 0 3px;
+		background-color: #fff;
+	}
+	100% {
+		-moz-transform: scale(0);
+	}
+}
+.header{
+	position: relative;
+	z-index: 1;
+}
+	.header input{
+		position: absolute;
+		top: 100%;
+		left: 0;
+		opacity: 0;
+	}
+	.header label{
+		cursor: pointer;
+	}

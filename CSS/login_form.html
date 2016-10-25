@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Calendar</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="style/login-form.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+</head>
+<body>
+<h1>Login</h1>
+<form class="login-form" method="POST" action="/">
+	<div class="input-wrapper">
+		<span class="icon user"></span>
+		<input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="E-mail" type="email" name="email">
+	</div>
+	<div class="input-wrapper">
+		<span class="icon email"></span>
+		<input required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Password" type="password" name="password">
+	</div>
+	<input class="button" type="submit" value="Submit">
+</form>
+
+</body>
+</html>

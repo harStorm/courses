@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User form</title>
+</head>
+<body>
+	<h1>User Form</h1>
+	<form action="/" method="POST">
+		<div>
+			<label for="login">User login</label>
+			<input required placeholder="User login" id="login" type="text" name="login">
+		</div>
+		<div>
+			<label for="password">Password</label>
+			<input required title="UpperCase, LowerCase and Number" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" placeholder="Password" id="password" type="password" name="password">
+			<small>* Password (UpperCase, LowerCase and Number)</small>
+		</div>
+		<div>
+			<label for="email" >Email</label>
+			<input required placeholder="Email" id="email" type="email" name="email">
+		</div>
+		<div>
+			<label for="phone">Phone</label>
+			<input pattern="[0-9]{9}" placeholder="662748360" id="phone" type="text" name="phone">
+		</div>
+		<div>
+			<label for="female">Gender</label>
+			<input id="female" type="radio" name="gender" value="female"> female
+			<input type="radio" name="gender" value="male"> male
+		</div>
+		<fieldset>
+			<legend>Birthday</legend>
+			<label for="birthdayMonth">Month</label>
+			<input placeholder="Month" id="birthdayMonth" type="number" min="1" max="12" step="1" value="1" name="birthdayMonth">
+			<label for="birthdayDay">Day</label>
+			<input placeholder="Day" id="birthdayDay" type="number" min="1" max="31" step="1" value="1" name="birthdayDay">
+			<label for="birthdayYear">Year</label>
+			<input placeholder="Month" id="birthdayYear" type="number" min="1980" max="2016" step="1" value="1980" name="birthdayYear">
+		</fieldset>
+		<div>
+			<label for="country">Country</label>
+			<input placeholder="country" list="country">
+			<small>* Only European country</small>
+			<datalist id="country" name="country">
+				<option value="Russia">Russia</option>
+				<option value="Ukraine">Ukraine</option>
+				<option value="France">France</option>
+				<option value="Spain">Spain</option>
+				<option value="Sweden">Sweden</option>
+				<option value="Norway">Norway</option>
+				<option value="Germany">Germany</option>
+				<option value="Finland">Finland</option>
+				<option value="Poland">Poland</option>
+				<option value="Italy">Italy</option>
+				<option value="United Kingdom">United Kingdom</option>
+				<option value="Romania">Romania</option>
+				<option value="Belarus">Belarus</option>
+				<option value="Kazakhstan">Kazakhstan</option>
+				<option value="Greece">Greece</option>
+				<option value="Bulgaria">Bulgaria</option>
+				<option vlaue="Iceland">Iceland</option>
+				<option value="Hungary">Hungary</option>
+				<option value="Portugal">Portugal</option>
+				<option value="Austria">Austria</option>
+				<option value="Czech Republic">Czech Republic</option>
+				<option value="Serbia">Serbia</option>
+				<option value="Republic of Ireland">Republic of Ireland</option>
+				<option value="Lithuania">Lithuania</option>
+				<option value="Latvia">Latvia</option>
+				<option value="Croatia">Croatia</option>
+				<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+				<option value="Slovakia">Slovakia</option>
+				<option value="Estonia">Estonia</option>
+				<option value="Denmark">Denmark</option>
+				<option value="Switzerland">Switzerland</option>
+				<option value="Netherlands">Netherlands</option>
+				<option value="Moldova">Moldova</option>
+				<option value="Belgium">Belgium</option>
+				<option value="Albania">Albania</option>
+				<option value="Republic of Macedonia">Republic of Macedonia</option>
+				<option value="Turkey">Turkey</option>
+				<option value="Slovenia">Slovenia</option>
+				<option value="Montenegro">Montenegro</option>
+				<option value="Kosovo">Kosovo</option>
+				<option value="Azerbaijan">Azerbaijan</option>
+				<option value="Luxembourg">Luxembourg</option>
+				<option value="Andorra">Andorra</option>
+				<option value="Malta">Malta</option>
+				<option value="Liechtenstein">Liechtenstein</option>
+				<option value="San Marino">San Marino</option>
+				<option value="Monaco">Monaco</option>
+				<option value="Vatican City">Vatican City</option>
+				<option value="Georgia">Georgia</option>
+			</datalist>
+		</div>
+		<fieldset>
+			<legend>Shipping address</legend>
+			<label for="shippingCity">City</label>
+			<input required placeholder="City" id="shippingCity" type="text" name="shippingCity">
+			<br>
+			<label for="shippingStreet">Street</label>
+			<input required placeholder="Street" id="shippingStreet" type="text" name="shippingStreet">
+			<br>
+			<label for="shippingPostalCode" maxlength="5">Postal code</label>
+			<input title="Postal code must be like 31 340" pattern="[0-9]{5}" required placeholder="Postal code" id="shippingPostalCode" type="text" name="shippingPostalCode">
+			<small>* Postal code must be like 31 340</small>
+			<br>
+			<input type="checkbox">
+			<label>If billing address is same</label>
+		</fieldset>
+		<fieldset>
+			<legend>Billing address</legend>
+			<label for="billingCity">City</label>
+			<input required placeholder="City" id="billingCity" type="text" name="billingCity">
+			<br>
+			<label for="billingStreet">Street</label>
+			<input required placeholder="Street" id="billingStreet" type="text" name="billingStreet">
+			<br>
+			<label for="billingPostalCode" maxlength="5">Postal code</label>
+			<input title="Postal code must be like 31 340" pattern="[0-9]{5}" required placeholder="Postal code" id="billingPostalCode" type="text" name="billingPostalCode">
+			<small>* Postal code must be like 31 340</small>
+			<br>
+			<label for="billingTime">Time</label>
+			<input required placeholder="Time" id="billingTime" type="month" name="billingTime">
+		</fieldset>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>
